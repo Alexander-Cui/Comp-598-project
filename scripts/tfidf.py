@@ -87,8 +87,11 @@ def main ():
 
     document_total_words = count_total_words()
 
+    #times word appears in all topics
     word_freq = {
     }
+
+    #time word appears per topic
     topic_freq = {
         '1':{},
         '2':{},
@@ -99,8 +102,10 @@ def main ():
         '7':{},
         '8':{}
     }
+    #time word appears in full document
     idf_freq = {
     }
+
 
     tfidf= {
         '1':{},
