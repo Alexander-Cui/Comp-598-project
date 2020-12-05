@@ -29,7 +29,7 @@ def add_posts(file_path, post_posts, post_keys):
 
 def main():
 
-    file_list = ['annotated-1.tsv','annotated-3.tsv']
+    file_list = ['annotated-1.tsv','annotated-2.tsv','annotated-3.tsv']
     base_path = os.path.join('..','data')
 
     path_list = []

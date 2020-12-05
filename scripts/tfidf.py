@@ -22,12 +22,8 @@ def compute_tfidf(word_freq,topic_freq,idf_freq,total_words, tfidf):
         for word, count in value.items():
             if word not in word_freq or word not in idf_freq:
                 continue
-                
             word_in_doc = idf_freq[word]
-
-            tfidf[key][word] = (count ) * math.log( (total_words / idf_freq[word] ) )
- 
-    
+            tfidf[key][word] = (count ) * math.log( (total_words / idf_freq[word] ) )    
 
 def count_total_words():
     count = 0
@@ -136,8 +132,6 @@ def main ():
     }
 
     compute_top_ten(tfidf, max_tfidf)
-    # print(topic_freq['1']['coup'])
-    # print(word_freq['coup'])
     print(max_tfidf)
     pp = pprint.PrettyPrinter(indent=4)
     pp.pprint(max_tfidf)
