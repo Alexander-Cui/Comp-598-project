@@ -23,7 +23,7 @@ def compute_tfidf(word_freq,topic_freq,idf_freq,total_words, tfidf):
             if word not in word_freq or word not in idf_freq:
                 continue
             word_in_doc = idf_freq[word]
-            tfidf[key][word] = (count ) * math.log( (total_words / idf_freq[word] ) )    
+            tfidf[key][word] = math.log(count ) * math.log( (total_words / idf_freq[word] ) )    
 
 def count_total_words():
     count = 0
